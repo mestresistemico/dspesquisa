@@ -2,15 +2,18 @@ import React from 'react';
 import { FontAwesome5 as Icon } from '@expo/vector-icons';
 import { Text, StyleSheet, View, Image, Alert } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
+import Header from '../../components/Header';
 
-
-const handleOnPress = () => {
-    Alert.alert('Você pressionou o botão')
-}
 
 const Home = () => {
-    return (
+    const navigation = useNavigation();
+    const handleOnPress = () => {
+        navigation.navigate('CreateRecord');
+   }
+       return (
         <>
+            <Header />
             <View style={styles.container}>
                 <Image
                     source={require('../../assets/gamer.png')}
@@ -25,7 +28,7 @@ const Home = () => {
                     <Text style={styles.buttonText}>COLETAR DADOS</Text>
                     <View style={styles.buttonIcon}>
                         <Text>
-                            <Icon name='chevron-right' color='#FFF' size={25} 
+                            <Icon name='chevron-right' color='#FFF' size={25}
                             />
                         </Text>
                     </View>
