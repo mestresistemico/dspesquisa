@@ -1,6 +1,4 @@
 import React from 'react';
-import { NumericLiteral } from 'typescript';
-import './styles.css';
 
 type Props = {
     totalPages?: number;
