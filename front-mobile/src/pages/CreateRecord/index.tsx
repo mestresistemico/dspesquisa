@@ -19,7 +19,7 @@ const mapSelectValues = (games: Game[]) => {
         value: game.id
     }));
 }
-const BASE_URL = 'http://192.168.0.7:8080'
+const BASE_URL = 'https://sds1-mestresistemico.herokuapp.com';
 
 const CreateRecord = () => {
 
