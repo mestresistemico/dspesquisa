@@ -29,7 +29,7 @@ const CreateRecord = () => {
     const [platform, setPlatform] = useState<GamePlatform>();
     const [allGames, setAllGames] = useState<Game[]>([]);
     const [filteredGames, setFilteredGames] = useState<Game[]>([]);
-
+    
 
     const handleChangePlatform = (selectedPlatform: GamePlatform) => {
         setPlatform(selectedPlatform);
@@ -46,7 +46,7 @@ const CreateRecord = () => {
             Alert.alert('Dados salvos com sucesso!');
             setName('');
             setAge('');
-            setSelectedGame('');
+            setSelectedGame(undefined);
             setPlatform(undefined);
         })
         .catch(() => {
